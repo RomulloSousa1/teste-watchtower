@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  app:
+    image: ghcr.io/romullosousa1/watchtower-example:latest
+    container_name: watchtower-example
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - WATCHTOWER_CLEANUP=true
+        - WATCHTOWER_POLL_INTERVAL=300
+        - WATCHTOWER_REGISTRY_AUTH=true
+        - WATCHTOWER_REGISTRY_USERNAME=RomulloSousa1
+        - WATCHTOWER_REGISTRY_PASSWORD=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
+    command: --registry ghcr.io --interval 300
