@@ -27,4 +27,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/USERNAME/watchtower-example:latest
+          tags: ghcr.io/romullosousa1/watchtower-example:latest
