@@ -16,8 +16,8 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - WATCHTOWER_CLEANUP=true
-        - WATCHTOWER_POLL_INTERVAL=300
+        - WATCHTOWER_POLL_INTERVAL=30
         - WATCHTOWER_REGISTRY_AUTH=true
         - WATCHTOWER_REGISTRY_USERNAME=RomulloSousa1
         - WATCHTOWER_REGISTRY_PASSWORD=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
-    command: --registry ghcr.io --interval 300
+    command: --interval 30
