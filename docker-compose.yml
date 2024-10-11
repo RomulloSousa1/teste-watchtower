@@ -12,7 +12,7 @@ services:
     container_name: watchtower
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /root/.docker/config.json:/config.json
+      - /config.json:/config.json
     environment:
       - WATCHTOWER_CLEANUP=true
         - WATCHTOWER_POLL_INTERVAL=30
