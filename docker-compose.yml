@@ -5,9 +5,8 @@ services:
     image: ghcr.io/romullosousa1/watchtower-example:latest
     container_name: watchtower-example
     ports:
-      - "3000:3000"
-    environment:
-      - NODE_ENV=production
+      - "443:3443"
+      - "80:3080"
 
   watchtower:
     image: containrrr/watchtower
