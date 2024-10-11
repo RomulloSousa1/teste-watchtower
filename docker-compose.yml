@@ -5,8 +5,7 @@ services:
     image: ghcr.io/romullosousa1/watchtower-example:latest
     container_name: watchtower-example
     ports:
-      - "443:3443"
-      - "80:3080"
+      - "3000:3000"
 
   watchtower:
     image: containrrr/watchtower
