@@ -1,12 +1,11 @@
-import express from "express";
+const express = require("express");
 const app = express();
+const port = 3000;
 
 app.get("/", (req, res) => {
-  const name = "World";
-  res.send(`Hello ${name}!`);
+  res.send("Hello from WatchTower and GHCR!");
 });
 
-const port = parseInt("3000");
 app.listen(port, () => {
-  console.log(`listening on port ${port}`);
+  console.log(`App running on port ${port}`);
 });
